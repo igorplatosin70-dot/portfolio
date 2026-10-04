@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфоліо веброзробника">
+    <title>Ігор | Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo">IGOR<span>.</span></a>
+
+        <nav class="nav">
+            <a href="#home">Головна</a>
+            <a href="#about">Про мене</a>
+            <a href="#skills">Навички</a>
+            <a href="#projects">Проєкти</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+
+        <button class="menu-button" id="menuButton" aria-label="Відкрити меню">☰</button>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">WEB DEVELOPER • PORTFOLIO</p>
+                <h1>Створюю сучасні<br><span>вебсайти.</span></h1>
+                <p class="hero-text">
+                    Я вивчаю HTML, CSS та JavaScript і створюю швидкі,
+                    адаптивні та сучасні сайти.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="button primary">Мої проєкти</a>
+                    <a href="#contact" class="button secondary">Зв'язатися</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="code-window">
+                    <div class="window-top">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <pre><code>&lt;<b>developer</b>&gt;
+  name: <i>"Igor"</i>
+  role: <i>"Web Developer"</i>
+  skills: [HTML, CSS, JS]
+&lt;/<b>developer</b>&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">01 — ПРО МЕНЕ</p>
+                <h2>Створюю сайти<br>та вчуся щодня.</h2>
+            </div>
+
+            <div class="about-text">
+                <p>
+                    Я починаю свій шлях у веброзробці. Мені подобається
+                    створювати сайти, працювати з дизайном і перетворювати
+                    ідеї на справжні вебсторінки.
+                </p>
+                <p>
+                    Зараз я розвиваю навички HTML, CSS і JavaScript та
+                    поступово збираю своє портфоліо з реальних проєктів.
+                </p>
+            </div>
+        </section>
+
+        <section class="section skills" id="skills">
+            <div class="section-heading">
+                <p class="eyebrow">02 — НАВИЧКИ</p>
+                <h2>Що я використовую</h2>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <span class="skill-number">01</span>
+                    <h3>HTML</h3>
+                    <p>Структура сторінок, семантичні елементи, форми та контент.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-number">02</span>
+                    <h3>CSS</h3>
+                    <p>Адаптивна верстка, Flexbox, Grid, анімації та сучасний дизайн.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-number">03</span>
+                    <h3>JavaScript</h3>
+                    <p>Інтерактивність, кнопки, меню, події та логіка сторінки.</p>
+                </article>
+
+                <article class="skill-card">
+                    <span class="skill-number">04</span>
+                    <h3>GitHub</h3>
+                    <p>Зберігання проєктів, версії коду та публікація сайтів онлайн.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section projects" id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">03 — ПРОЄКТИ</p>
+                <h2>Мої роботи</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card featured">
+                    <div class="project-top">
+                        <span>01</span>
+                        <span>HTML • CSS • JS</span>
+                    </div>
+                    <div class="project-preview pizza-preview">
+                        <div class="pizza-symbol">🍕</div>
+                        <h3>Pizzeria Bella</h3>
+                        <p>Сайт сучасної піцерії</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>Pizzeria Bella</h3>
+                        <p>
+                            Адаптивний сайт піцерії з меню, фотографіями,
+                            анімаціями та контактною секцією.
+                        </p>
+                        <a href="#" class="project-link" data-project="Pizzeria Bella">
+                            Переглянути проєкт →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span>02</span>
+                        <span>COMING SOON</span>
+                    </div>
+                    <div class="project-preview law-preview">
+                        <div class="preview-icon">⚖</div>
+                        <h3>Law Firm</h3>
+                        <p>Сайт юридичної компанії</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>Law Firm</h3>
+                        <p>
+                            Професійний сайт юридичної компанії.
+                            Проєкт у розробці.
+                        </p>
+                        <span class="project-status">У розробці</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span>03</span>
+                        <span>COMING SOON</span>
+                    </div>
+                    <div class="project-preview construction-preview">
+                        <div class="preview-icon">🏗️</div>
+                        <h3>BuildPro</h3>
+                        <p>Сайт будівельної компанії</p>
+                    </div>
+                    <div class="project-info">
+                        <h3>BuildPro</h3>
+                        <p>
+                            Сучасний landing page для будівельної компанії.
+                            Проєкт у розробці.
+                        </p>
+                        <span class="project-status">У розробці</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="contact-box">
+                <p class="eyebrow">04 — КОНТАКТИ</p>
+                <h2>Маєте ідею<br>для сайту?</h2>
+                <p>
+                    Я відкритий до нових проєктів та можливостей
+                    для розвитку у веброзробці.
+                </p>
+
+                <a class="button primary" href="mailto:your-email@example.com">
+                    Написати мені
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Igor. Portfolio.</p>
+        <a href="#home">На початок ↑</a>
+    </footer>
+
+    <div class="toast" id="toast">Проєкт ще в розробці</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
