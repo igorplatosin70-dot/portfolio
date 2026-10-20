@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2b1d14">
+  <meta name="description" content="Демо-сайт кав’ярні: меню з категоріями, статус «відкрито/зачинено» та форма бронювання столика з валідацією.">
+  <title>KAVA — сайт кав’ярні (демо)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-demo-bar">
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="logo" href="#home">KAVA<span>.</span></a>
+      <button class="burger" aria-expanded="false" aria-controls="menu-nav" aria-label="Відкрити меню"><span></span><span></span></button>
+      <nav id="menu-nav" class="nav" aria-label="Головна навігація">
+        <a href="#menu">Меню</a><a href="#about">Про нас</a><a href="#book">Бронювання</a><a href="#visit">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <p id="open-status" class="status" role="status"><span class="dot"></span><span class="status-text">Перевіряю години роботи…</span></p>
+          <h1>Місто може <em>почекати.</em></h1>
+          <p class="lead">Кава з маленьких обсмажок, свіжа випічка та трохи тиші посеред Львова. Заходь на фільтр — або залишайся на довше.</p>
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="#book">Забронювати столик</a>
+            <a class="btn btn-line-light" href="#menu">Подивитись меню</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 320 320" role="img"><circle cx="160" cy="170" r="140" fill="#3d2a1d"/>
+            <path d="M92 130h136v62a68 68 0 0 1-68 68 68 68 0 0 1-68-68z" fill="#f3e7d6"/>
+            <path d="M228 148h14a24 24 0 0 1 0 48h-18" fill="none" stroke="#f3e7d6" stroke-width="12" stroke-linecap="round"/>
+            <ellipse cx="160" cy="130" rx="68" ry="14" fill="#c8f169"/><ellipse cx="160" cy="130" rx="56" ry="9" fill="#6b4630"/>
+            <path class="steam" d="M130 100c-10-14 10-22 0-38M160 96c-10-14 10-22 0-38M190 100c-10-14 10-22 0-38" fill="none" stroke="#f3e7d6" stroke-width="5" stroke-linecap="round" opacity=".7"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="block">
+      <div class="wrap">
+        <p class="eyebrow">Наше маленьке меню</p>
+        <h2>Що сьогодні смакує?</h2>
+        <div class="tabs" role="tablist" aria-label="Категорії меню"></div>
+        <ul id="menu-list" class="menu-list" role="tabpanel"></ul>
+      </div>
+    </section>
+
+    <section id="about" class="block alt">
+      <div class="wrap about">
+        <div>
+          <p class="eyebrow">Про нас</p>
+          <h2>Хороша кава — привід зустрітися.</h2>
+        </div>
+        <div class="about-text">
+          <p>Купуємо зерна в невеликих фермерів і смажимо щотижня, щоб у чашці було відчутно місце, де кава виросла. Випічку готуємо щоранку: масло, кориця, цедра.</p>
+          <ul class="facts">
+            <li><b>12</b><span>сортів зерна за рік</span></li>
+            <li><b>6:00</b><span>починаємо випікати</span></li>
+            <li><b>0</b><span>одноразових стаканів</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="block">
+      <div class="wrap book">
+        <div>
+          <p class="eyebrow">Бронювання</p>
+          <h2>Залиш за собою столик.</h2>
+          <p class="muted">Заповни форму — підтвердимо дзвінком. Це демо: дані нікуди не надсилаються, вони лише показуються на цій сторінці.</p>
+        </div>
+        <form id="booking" class="form" novalidate>
+          <div class="field"><label for="b-name">Ім’я</label><input id="b-name" name="name" autocomplete="name" required><small class="err" data-for="name"></small></div>
+          <div class="field"><label for="b-phone">Телефон</label><input id="b-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+380 67 123 45 67" required><small class="err" data-for="phone"></small></div>
+          <div class="row">
+            <div class="field"><label for="b-date">Дата</label><input id="b-date" name="date" type="date" required><small class="err" data-for="date"></small></div>
+            <div class="field"><label for="b-time">Час</label><select id="b-time" name="time" required></select><small class="err" data-for="time"></small></div>
+          </div>
+          <div class="field"><label for="b-guests">Кількість гостей</label>
+            <select id="b-guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+          <button class="btn btn-dark" type="submit">Забронювати</button>
+          <p id="book-result" class="result" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="visit" class="block dark">
+      <div class="wrap visit">
+        <div><p class="eyebrow">Контакти</p><h2>Вулиця Вірменська, 12, Львів</h2></div>
+        <ul class="hours">
+          <li><span>Пн – Пт</span><b>08:00 – 20:00</b></li>
+          <li><span>Сб – Нд</span><b>09:00 – 21:00</b></li>
+          <li><span>Телефон</span><b>+380 32 297 41 08</b></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot"><div class="wrap">© KAVA — навчальний демо-проєкт із портфоліо Марини Платошин</div></footer>
+
+  <div class="demo-bar"><a href="../../index.html#work">← Назад до портфоліо</a></div>
+  <script src="main.js"></script>
+</body>
+</html>

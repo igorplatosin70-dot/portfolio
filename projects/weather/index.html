@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f2a43">
+  <meta name="description" content="Погодний застосунок на публічному REST API Open-Meteo: пошук міста, поточна погода, прогноз на 7 днів, обробка помилок.">
+  <title>Погода — застосунок на REST API (демо)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-demo-bar">
+  <main class="wrap shell">
+    <header class="head">
+      <p class="eyebrow">REST API · Open-Meteo</p>
+      <h1>Яка там <em>погода?</em></h1>
+    </header>
+
+    <form id="search" class="search" novalidate>
+      <label class="sr-only" for="city">Місто</label>
+      <input id="city" placeholder="Введіть місто, напр. Львів" autocomplete="off" maxlength="60">
+      <button class="btn btn-lime" type="submit">Знайти</button>
+      <button id="geo" class="btn btn-ghost" type="button" title="Визначити моє місцезнаходження">📍</button>
+    </form>
+    <ul id="suggest" class="suggest" hidden></ul>
+
+    <div id="state" class="state" role="status" aria-live="polite"></div>
+
+    <section id="now" class="now" hidden>
+      <div class="now-main">
+        <p id="place" class="place"></p>
+        <div class="temp-row"><span id="icon" class="icon" aria-hidden="true"></span><span id="temp" class="temp"></span></div>
+        <p id="desc" class="desc"></p>
+      </div>
+      <dl class="facts">
+        <div><dt>Відчувається</dt><dd id="feels"></dd></div>
+        <div><dt>Вологість</dt><dd id="hum"></dd></div>
+        <div><dt>Вітер</dt><dd id="wind"></dd></div>
+      </dl>
+    </section>
+
+    <section id="week" class="week" aria-label="Прогноз на 7 днів" hidden></section>
+  </main>
+
+  <div class="demo-bar"><a href="../../index.html#work">← Назад до портфоліо</a></div>
+  <script src="main.js"></script>
+</body>
+</html>

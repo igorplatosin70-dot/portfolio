@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1f3d2b">
+  <meta name="description" content="Демо інтернет-магазину рослин: каталог, пошук, фільтри, сортування та робочий кошик із промокодом.">
+  <title>Листок — інтернет-магазин (демо)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-demo-bar">
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="logo" href="#">Листок<span>.</span></a>
+      <button id="cart-open" class="cart-btn" aria-haspopup="dialog" aria-controls="drawer">Кошик <span id="cart-count" class="badge">0</span></button>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="wrap">
+      <p class="eyebrow">Рослини · горщики · догляд</p>
+      <h1>Зелений куточок <em>за хвилину.</em></h1>
+      <p class="lead">Оберіть рослину, додайте у кошик і спробуйте промокод <b>DEMO10</b>. Кошик зберігається в браузері.</p>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <label class="search"><span class="sr-only">Пошук</span><input id="q" type="search" placeholder="Пошук: монстера, горщик…" autocomplete="off"></label>
+      <div id="cats" class="cats" role="group" aria-label="Категорії"></div>
+      <label class="sort"><span class="sr-only">Сортування</span>
+        <select id="sort"><option value="pop">За популярністю</option><option value="asc">Спочатку дешевші</option><option value="desc">Спочатку дорожчі</option><option value="name">За назвою</option></select>
+      </label>
+    </div>
+    <p id="count" class="count" aria-live="polite"></p>
+    <ul id="grid" class="grid"></ul>
+    <p id="empty" class="empty" hidden>Нічого не знайдено. Спробуйте інший запит або категорію.</p>
+  </main>
+
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+    <div class="drawer-head"><h2 id="drawer-title">Ваш кошик</h2><button id="cart-close" class="icon-btn" aria-label="Закрити кошик">✕</button></div>
+    <ul id="cart-list" class="cart-list"></ul>
+    <p id="cart-empty" class="cart-empty">Кошик порожній. Додайте щось зелене 🌿</p>
+    <div id="cart-foot" class="cart-foot">
+      <form id="promo" class="promo" novalidate><label class="sr-only" for="promo-in">Промокод</label><input id="promo-in" placeholder="Промокод (DEMO10)" autocomplete="off"><button class="btn btn-line" type="submit">Застосувати</button></form>
+      <p id="promo-msg" class="promo-msg" role="status"></p>
+      <dl class="sum">
+        <div><dt>Сума</dt><dd id="sum-sub">0 ₴</dd></div>
+        <div id="sum-disc-row" hidden><dt>Знижка</dt><dd id="sum-disc">0 ₴</dd></div>
+        <div><dt>Доставка</dt><dd id="sum-ship">0 ₴</dd></div>
+        <div class="total"><dt>Разом</dt><dd id="sum-total">0 ₴</dd></div>
+      </dl>
+      <p class="ship-note" id="ship-note"></p>
+      <button id="checkout" class="btn btn-dark wide" type="button">Оформити (тест)</button>
+      <p id="done" class="done" role="status" hidden></p>
+    </div>
+  </aside>
+
+  <div class="demo-bar"><a href="../../index.html#work">← Назад до портфоліо</a></div>
+  <script src="main.js"></script>
+</body>
+</html>

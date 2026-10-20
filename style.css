@@ -583,3 +583,16 @@ a {
         gap: 10px;
     }
 }
+
+
+.portfolio-note {
+    max-width: 760px;
+    margin-top: 18px;
+    color: var(--muted);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
